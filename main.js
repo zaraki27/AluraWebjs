@@ -1,19 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+function tocaSomRisada(){
+    document.querySelector("#som_tecla_risada").play();
+    
+}
 
-    function playSound(soundId) {
-      const audioElement = document.getElementById(soundId);
-      if (audioElement) {
-        audioElement.currentTime = 0; 
-        audioElement.play();
-      }
-    }
-  
- 
-    document.querySelectorAll('.tecla').forEach(button => {
-      button.addEventListener('click', function() {
-        const soundId = 'som_' + this.classList[1];
-        playSound(soundId);
-      });
-    });
-  });
-  
+const listaDeTeclas = document.querySelectorAll(".tecla");
+
+listaDeTeclas[0].onclick = tocaSomAplausos;
